@@ -40,7 +40,7 @@ include("connect.php");//contains all passwords.
 	
 
 	$max = 12;
-	$rank = "<table id='userscrs'>   <tr> <th>Pos.</th> <th>Name</th>  <th>Distance (km) </th> <th> Clerks rescued </th> <th>Comments</th> </tr>";
+	$rank = "<table id='userscrs'>   <tr> <th>Pos.</th> <th>Name</th>  <th>Distance (km) </th> <th> Neys rescued </th> <th>Comments</th> </tr>";
 	for($i = 0;  ($i < count($scores)) and ($i<$max) ; $i++) {
 		if($i<3) {
 			$rank = $rank . "<tr> <td ><b style='color:brown'>" .($i +1)."</b></td><td ><b style='color:brown'>" . $names[$i]. "</b></td> <td style='text-align: right;' ><b style='color:brown'>". 
