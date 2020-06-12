@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html  onclick="volare('helicop')" onkeydown="volare('helicop')">
 <head>
-<title>JoriCop</title>
+    <title>Gere-Ney</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta charset="UTF-8">
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
@@ -141,7 +141,7 @@ function carrega() {
 
 
 function intro() {
-    document.getElementById("score").innerHTML="<h1 align='justify' style='color:red'><b>Welcome to Neyworld!<b></h1> <br> "+
+    document.getElementById("score").innerHTML="<h1 align='justify' style='text-shadow:1px 1px 4px blue;color: white '><b>Welcome to Ney-city! Floteu i voleu per sobre els eficicis d'aquesta Ney-ciutat. Trobareu alguns Neys somrients als terrats. Si voleu, els podeu agafar amb el pèndol. <b></h1> <br> "+
             "<center><button onclick='mou=true;requestAnimationFrame(move)'><h1><b style='color:red'>YES</b></h1></button>"+
             "<button onclick='caratrista()'><h1><b>NO<b></h1></button>  <button style='color:green' onclick='showranking()'><h1><b>Show Ranking<b></h1></button></center>"; 
 }
@@ -195,7 +195,7 @@ function move() {
          "<br> human x: " + human.x + "<br> human y: " + human.y + "<br> human heigth: " + human.height + "<br> human width " + human.width +
          "<br> bloc 6 y " + bc6.y + "<br> corda*sin(ang corda):"+ Math.round(corda.height*Math.sin(Math.PI*corda.angle/180) ) + 
           "<br> angle corda: " + corda.angle ;
-	document.getElementById("score").innerHTML = "<h3><b>Distance <b style='color:brown'>"+Math.round(sco/10)/100 +" </b></b>km  - Neys resqued </b><b style='color:brown'>"+rescats+"</b></h3>";
+	document.getElementById("score").innerHTML = "<h3 style='color:white;text-shadow:1px 1px 4px blue;' ><b>Distance <b style='color:brown;text-shadow:1px 1px 4px blue;'>"+Math.round(sco/10)/100 +" </b></b>km  - Neys resqued </b><b style='color:brown'>"+rescats+"</b></h3>";
 	if(mou) sco +=1;
 	
         if( (sco % 400) ===0) {enemic1.x=1200; enemic1.vx=-10; enemic1.y=Math.random()*bc1.y    ;}
@@ -335,7 +335,8 @@ function showranking() {
 </div> 
 
 
-
- <embed src="/html/Kalimba.mp3" loop="true" autostart="true" width="2" height="0">
+<audio autoplay loop  id="playAudio">
+    <source src="audio/rainbowmeadows.mp3" type="audio/mp3">
+</audio>
 </body>
 </html> 
