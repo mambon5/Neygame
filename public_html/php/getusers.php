@@ -23,7 +23,7 @@ include("connect.php");//contains all passwords.
     
      
  //get scores from da people
- $sql = "SELECT user, distance, clerks, comment FROM helikopter_users";
+ $sql = "SELECT user, distance, clerks, comment FROM neygame_users";
     $result = $conn->query($sql);
 
 	$result2 =  $result -> fetch_all(MYSQLI_ASSOC);

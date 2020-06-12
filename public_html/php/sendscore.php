@@ -30,7 +30,7 @@ $clerks =  filter_input(INPUT_GET, 'clerks');
 //echo nl2br("Welcome " . $user. "! with email: ". $email. ". Distance run: ".$distance.". Clerks rescued: ".$clerks.". You commented that: <br> ".$comment. "<br>");
 
 
-$sql = sprintf("INSERT INTO helikopter_users (user, email, comment, distance, clerks, IP)
+$sql = sprintf("INSERT INTO neygame_users (user, email, comment, distance, clerks, IP)
 VALUES ('%s','%s', '%s', '%s', '%s', '%s')", 
 addslashes($user),
 addslashes($email),
@@ -45,7 +45,7 @@ if ($conn->query($sql) === FALSE) {
 }
  
  //get scores from da people
- $sql = "SELECT user, distance, clerks FROM helikopter_users";
+ $sql = "SELECT user, distance, clerks FROM neygame_users";
     $result = $conn->query($sql);
 
 	$result2 =  $result -> fetch_all(MYSQLI_ASSOC);
