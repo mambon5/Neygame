@@ -23,14 +23,14 @@ body{
     width: 30px;
     height: 30px;
     border-radius: 30px;
-     background-image: url("../Neycap.png");
+     background-image: url("../images/Neycap.png");
     background-size: 60px;
     border-color: blue;
     background-color: greenyellow;
  }
 .sol {
     position:absolute;
-    background-image: url("../Neycap.png");
+    background-image: url("../images/Neycap_peque.png");
     background-size: 100px;
     left:30px;
     top:10px;
