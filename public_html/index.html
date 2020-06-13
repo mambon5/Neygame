@@ -142,7 +142,7 @@ function carrega() {
 
 function intro() {
     document.getElementById("score").innerHTML="<h1 align='justify' style='text-shadow:1px 1px 4px blue;color: white '><b>Welcome to Ney-city! Floteu i voleu per sobre els eficicis d'aquesta Ney-ciutat. Trobareu alguns Neys somrients als terrats. Si voleu, els podeu agafar amb el pèndol. <b></h1> <br> "+
-            "<center><button onclick='mou=true;requestAnimationFrame(move)'><h1><b style='color:red'>YES</b></h1></button>"+
+            "<center><button onclick='playsong();mou=true;requestAnimationFrame(move)'><h1><b style='color:red'>YES</b></h1></button>"+
             "<button onclick='caratrista()'><h1><b>NO<b></h1></button>  <button style='color:green' onclick='showranking()'><h1><b>Show Ranking<b></h1></button></center>"; 
 }
 
@@ -240,6 +240,18 @@ function gameover() {
 function showranking() {
     window.location.href = "php/getusers.php";
 }
+function playsong() {
+    var rand = Math.round(Math.random());
+    //canço de fons
+    var song = 'yoshiflowerisland.mp3';
+    if(rand===1)  song='rainbowmeadows.mp3';
+    song = "audio/"+song;
+    document.getElementById("aux3").innerHTML = rand + " " + song;
+    document.getElementById("aux3").visibility ="visible";
+    var cançofons = new Audio(song);
+    cançofons.loop = true;
+    cançofons.play();
+}
 
 </script>
 <div class="solbunch">
@@ -294,11 +306,11 @@ function showranking() {
     <div class="cara2">o.O</div>
 </div>
 
-<div id="human1"><img id="ney" src="Ney.png" alt="Fordst" width="100px"><span class="cara3" id="cara_huma">:|</span></div>
+<div id="human1"><img id="ney" src="images/Ney_peque.png" alt="Fordst" width="100px"><span class="cara3" id="cara_huma">:|</span></div>
 
 <div id="helicop" class="heli">
     <div class="cara" id="cara"> </div>  
-    <img id="perezimage" src="Perez-Ney.png" alt="Fordst" width="80px">
+    <img id="perezimage" src="images/Perez-Ney_peque.png" alt="Fordst" width="80px">
     
      
     <div id="corda"> </div>
@@ -334,9 +346,9 @@ function showranking() {
     </center>
 </div> 
 
-
+<!--
 <audio autoplay loop  id="playAudio">
     <source src="audio/rainbowmeadows.mp3" type="audio/mp3">
-</audio>
+</audio> -->
 </body>
 </html> 
